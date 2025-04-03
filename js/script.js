@@ -139,13 +139,30 @@
 
 ///////////////////////////////////////////////////////////////////////
 
-function getEvensInRange(numFirst, numEnd) {
-  let array = [];
-  for (let i = numFirst; i < numEnd; i++) {
-    if (i % 2 === 0) {
-      array.push(i);
+// function getEvensInRange(numFirst, numEnd) {
+//   let array = [];
+//   for (let i = numFirst; i < numEnd; i++) {
+//     if (i % 2 === 0) {
+//       array.push(i);
+//     }
+//   }
+//   return array;
+// }
+// console.log(getEvensInRange(1, 8));
+
+//////////////////////////////////////////////////////////////////////////
+
+function filter(array, call) {
+  let newArray = [];
+
+  for (const item of array) {
+    if (call(item)) {
+      newArray.push(item);
     }
   }
-  return array;
+  return newArray;
 }
-console.log(getEvensInRange(1, 8));
+function callback(item) {
+  return item % 2 === 0;
+}
+console.log(filter([2, 4, 3, 6, 4, 8], callback));
