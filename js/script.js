@@ -114,14 +114,25 @@
 
 ////////////////////////////////////////////////////////////////////
 
-const obj = {
-  firstName: 'John',
-  lastName: 'Doe',
-};
-function newObj() {
-  for (const param in obj) {
-    const newObj = obj[param];
-    console.log(`${param}: ${newObj}`);
-  }
+// const obj = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+// };
+// function newObj() {
+//   for (const param in obj) {
+//     const newObj = obj[param];
+//     console.log(`${param}: ${newObj}`);
+//   }
+// }
+// newObj();
+
+///////////////////////////////////////////////////////////////////
+
+function formatName(name, surname) {
+  const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+  const newSurname =
+    surname.charAt(0).toUpperCase() + surname.slice(1).toLowerCase();
+  return `${newName} ${newSurname}`;
 }
-newObj();
+
+console.log(formatName('kacPEr', 'nOWaK'));
