@@ -128,11 +128,24 @@
 
 ///////////////////////////////////////////////////////////////////
 
-function formatName(name, surname) {
-  const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-  const newSurname =
-    surname.charAt(0).toUpperCase() + surname.slice(1).toLowerCase();
-  return `${newName} ${newSurname}`;
-}
+// function formatName(name, surname) {
+//   const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+//   const newSurname =
+//     surname.charAt(0).toUpperCase() + surname.slice(1).toLowerCase();
+//   return `${newName} ${newSurname}`;
+// }
 
-console.log(formatName('kacPEr', 'nOWaK'));
+// console.log(formatName('kacPEr', 'nOWaK'));
+
+///////////////////////////////////////////////////////////////////////
+
+function getEvensInRange(numFirst, numEnd) {
+  let array = [];
+  for (let i = numFirst; i < numEnd; i++) {
+    if (i % 2 === 0) {
+      array.push(i);
+    }
+  }
+  return array;
+}
+console.log(getEvensInRange(1, 8));
