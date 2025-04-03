@@ -76,16 +76,38 @@
 
 ///////////////////////////////////////////////////////////////
 
-const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
+// const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
 
-let uniqueTags = {};
+// let uniqueTags = {};
 
-for (const tag of tags) {
-  if (!uniqueTags[tag]) {
-    uniqueTags[tag] = { appearances: 1 };
-  } else {
-    uniqueTags[tag].appearances++;
+// for (const tag of tags) {
+//   if (!uniqueTags[tag]) {
+//     uniqueTags[tag] = { appearances: 1 };
+//   } else {
+//     uniqueTags[tag].appearances++;
+//   }
+// }
+
+// console.log(uniqueTags);
+
+//////////////////////////////////////////////////////////////
+
+const employees = [
+  { name: 'Amanda Doe', salary: 3000 },
+  { name: 'John Doe', salary: 4000 },
+  { name: 'Claire Downson', salary: 2000 },
+  { name: 'Freddie Clarkson', salary: 6000 },
+  { name: 'Thomas Delaney', salary: 8200 },
+];
+function filterEmployees(employees, minSalary, maxSalary) {
+  let newArray = [];
+  for (const empl of employees) {
+    if (empl.salary < maxSalary && empl.salary > minSalary) {
+      newArray.push(empl);
+    }
   }
+  return newArray;
 }
 
-console.log(uniqueTags);
+const filteredEmployees = filterEmployees(employees, 2000, 8000);
+console.log(filteredEmployees);
