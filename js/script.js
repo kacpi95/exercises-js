@@ -52,24 +52,40 @@
 
 //////////////////////////////////////////////////////////
 
-const persons = {
-  john: 2000,
-  amanda: 3000,
-  thomas: 1500,
-  james: 6000,
-  claire: 3000,
-};
-let sumAll = 0;
-let sumHigh = persons.john;
-let sumLow = persons.john;
-for (const person in persons) {
-  const personMoney = persons[person];
-  sumAll += personMoney;
-  if (personMoney > sumHigh) {
-    sumHigh = personMoney;
-  }
-  if (personMoney < sumLow) {
-    sumLow = personMoney;
+// const persons = {
+//   john: 2000,
+//   amanda: 3000,
+//   thomas: 1500,
+//   james: 6000,
+//   claire: 3000,
+// };
+// let sumAll = 0;
+// let sumHigh = persons.john;
+// let sumLow = persons.john;
+// for (const person in persons) {
+//   const personMoney = persons[person];
+//   sumAll += personMoney;
+//   if (personMoney > sumHigh) {
+//     sumHigh = personMoney;
+//   }
+//   if (personMoney < sumLow) {
+//     sumLow = personMoney;
+//   }
+// }
+// console.log(sumAll, sumHigh, sumLow);
+
+///////////////////////////////////////////////////////////////
+
+const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
+
+let uniqueTags = {};
+
+for (const tag of tags) {
+  if (!uniqueTags[tag]) {
+    uniqueTags[tag] = { appearances: 1 };
+  } else {
+    uniqueTags[tag].appearances++;
   }
 }
-console.log(sumAll, sumHigh, sumLow);
+
+console.log(uniqueTags);
