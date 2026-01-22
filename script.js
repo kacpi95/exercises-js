@@ -152,17 +152,18 @@
 
 //////////////////////////////////////////////////////////////////////////
 
-function filter(array, call) {
-  let newArray = [];
+// function filter(array, call) {
+//   let newArray = [];
 
-  for (const item of array) {
-    if (call(item)) {
-      newArray.push(item);
-    }
-  }
-  return newArray;
-}
-function callback(item) {
-  return item % 2 === 0;
-}
-console.log(filter([2, 4, 3, 6, 4, 8], callback));
+//   for (const item of array) {
+//     if (call(item)) {
+//       newArray.push(item);
+//     }
+//   }
+//   return newArray;
+// }
+// function callback(item) {
+//   return item % 2 === 0;
+// }
+// console.log(filter([2, 4, 3, 6, 4, 8], callback));
+
