@@ -167,3 +167,61 @@
 // }
 // console.log(filter([2, 4, 3, 6, 4, 8], callback));
 
+// 1️⃣ Licznik kliknięć (localStorage)
+
+const container = document.querySelector('.container');
+// const text = document.querySelector('.textSum');
+// const btn = document.querySelector('.btn');
+
+// btn.addEventListener('click', () => {
+//   let count = Number(localStorage.getItem('countClick')) || 0;
+//   count++;
+
+//   localStorage.setItem('countClick', count);
+//   text.textContent = count; // 👈 DOM
+// });
+
+// 2️⃣ Input → lista
+// 3️⃣ Usuwanie elementów
+
+// const inputElement = document.querySelector('.input');
+// const button = document.querySelector('.btn');
+// const ulList = document.querySelector('.ulList');
+
+// const handleAdd = () => {
+//   if (inputElement.value === '') {
+//     console.log('Empty form');
+//   } else {
+//     const liList = document.createElement('li');
+//     const text = document.createElement('p');
+//     const btnRemove = document.createElement('button');
+//     btnRemove.textContent = 'X';
+
+//     btnRemove.addEventListener('click', () => {
+//       liList.remove();
+//     });
+
+//     liList.append(text, btnRemove);
+//     text.textContent = inputElement.value;
+
+//     ulList.appendChild(liList);
+//     inputElement.value = '';
+//   }
+// };
+// button.addEventListener('click', handleAdd);
+
+// 4️⃣ Toggle tekstu
+
+// let isVisible = true;
+
+// buttonToglle.addEventListener('click', () => {
+//   if (isVisible) {
+//     textToggle.textContent = 'World';
+//     buttonToglle.textContent = 'Ukryj';
+//   } else {
+//     textToggle.textContent = 'Hello';
+//     buttonToglle.textContent = 'Pokaż';
+//   }
+
+//   isVisible = !isVisible;
+// });
