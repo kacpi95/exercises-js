@@ -225,3 +225,22 @@ const container = document.querySelector('.container');
 
 //   isVisible = !isVisible;
 // });
+
+// 5️⃣ Dark mode + localStorage
+
+const button = document.createElement('button');
+const body = document.body;
+
+button.textContent = 'Dark mode';
+container.appendChild(button);
+
+button.addEventListener('click', () => {
+  const theme = body.classList.toggle('dark');
+  localStorage.setItem('color', theme);
+});
+
+const savedTheme = localStorage.getItem('color');
+
+if (savedTheme === 'true') {
+  body.classList.add('dark');
+}
